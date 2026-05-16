@@ -1,0 +1,50 @@
+# ASCII Art Converter — Default Configuration
+# All values here are the system defaults and can be overridden via CLI flags.
+
+rendering:
+  cols: 120                 # Character columns
+  rows: null                # null = auto from aspect ratio
+  font_aspect: 0.5          # char cell width/height ratio
+  luma_formula: perceived   # perceived | luma | minmax | average | custom
+  brightness: 0.0
+  contrast: 1.0
+  gamma: 1.0
+  saturation: 1.0
+  hue_shift: 0.0
+  edge_boost: 0.3
+  edge_method: canny        # canny | sobel | laplacian
+  canny_low: 50
+  canny_high: 150
+  bilateral: false
+  invert: false
+  normalize: true
+
+character_library:
+  chars: standard           # standard | extended | unicode_block | braille | block | minimal | digits
+  font_path: null           # null = auto-detect system font
+  font_size: 14
+  patch_h: 16
+  patch_w: 8
+
+matching:
+  match_mode: hybrid        # density | structure | hybrid | ml
+  topk: 8                   # candidates for hybrid pre-filter
+  edge_weight: 0.4
+
+dithering:
+  dither: floyd_steinberg   # none | floyd_steinberg | stucki | jarvis | bayer | random
+
+color:
+  color_mode: truecolor     # none | ansi16 | ansi256 | truecolor | html
+  use_bg_color: false
+
+video:
+  target_fps: null          # null = source FPS
+  workers: 0                # 0 = auto (CPUs - 1)
+  temporal_blend: 0.0       # 0 = none, 0.3 = moderate smoothing
+
+output:
+  font_size: 14             # for PNG / MP4 rendering
+  bg_color: [0, 0, 0]       # RGB background for image/video output
+  ffmpeg_crf: 23            # FFmpeg quality (18=high, 28=low)
+  ffmpeg_preset: medium     # FFmpeg speed/quality preset
