@@ -5,7 +5,7 @@
 
 ---
 
-## ✨ Feature Highlights
+## Feature Highlights
 
 | Feature | Details |
 |---------|---------|
@@ -22,7 +22,7 @@
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### 1. Clone / download the project
 
@@ -61,7 +61,7 @@ If missing: `brew install ffmpeg` (macOS) · `sudo apt install ffmpeg` (Linux)
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Image → Terminal (live preview)
 
@@ -95,7 +95,7 @@ python main.py image photo.jpg --out output.txt --cols 120
 
 ---
 
-## 🎬 Video Examples
+## Video Examples
 
 ### Video → Terminal live view
 
@@ -129,7 +129,7 @@ python main.py webcam --cols 100 --preset anime
 
 ---
 
-## 🌐 Web UI (Gradio)
+## Web UI (Gradio)
 
 ```bash
 python main.py ui
@@ -144,7 +144,7 @@ python main.py ui --share
 
 ---
 
-## ⚙️ All CLI Options
+## All CLI Options
 
 ### Shared rendering options (available on `image`, `video`, `webcam`)
 
@@ -180,7 +180,7 @@ python main.py ui --share
 
 ---
 
-## 🎨 Style Presets
+## Style Presets
 
 ```bash
 python main.py presets   # list all presets
@@ -200,7 +200,7 @@ python main.py presets   # list all presets
 
 ---
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 ```
 Image to ASCII/
@@ -235,7 +235,7 @@ Image to ASCII/
 
 ---
 
-## ⚡ Performance Tips
+## Performance Tips
 
 1. **Use `--mode density`** for maximum speed (1–2 ms/frame on 120-col output).
 2. **Use `--mode hybrid`** for best quality/speed balance (~5–15 ms/frame).
@@ -248,7 +248,7 @@ Image to ASCII/
 
 ---
 
-## 🔬 How the Hybrid Matching Works
+## How the Hybrid Matching Works
 
 1. **Preprocess**: resize image to character grid, compute luminance + edge map.
 2. **Dither**: apply selected error-diffusion or ordered dithering to spread quantisation error.
@@ -260,7 +260,7 @@ This hybrid approach avoids the `O(N)` full search while still considering struc
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 - Fork, make changes, open a PR.
 - Run `python main.py image <test.jpg> --verbose` to verify your changes.
@@ -268,6 +268,6 @@ This hybrid approach avoids the `O(N)` full search while still considering struc
 
 ---
 
-## 📄 License
+## License
 
 MIT — free for personal and commercial use.
